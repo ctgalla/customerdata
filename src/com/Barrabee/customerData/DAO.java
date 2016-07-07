@@ -25,7 +25,7 @@ public class DAO {
 		configuration.configure("hibernate.cfg.xml");
 
 		// pass in setup file for Product class
-		configuration.addResource("product.hbm.xml");
+		configuration.addResource("customerdata.hbm.xml");
 
 		// Since version 4.x, service registry is being used
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
