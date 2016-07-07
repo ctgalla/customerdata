@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>   
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.Barrabee.customerdata.Product" table="users">
+		<id name="index" column="Index" type="int">
+			<generator class="increment"></generator>
+		</id>
+		<property name="username" column="username" type="string"></property>
+		<property name="password" column="password" type="string"></property>
+		<property name="email" column="email" type="string"></property>
+			<property name="fullName" column="fullName" type="string"></property>
+	</class>
+</hibernate-mapping> 
