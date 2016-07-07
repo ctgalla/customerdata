@@ -7,8 +7,6 @@ public class User {
 	private String email;
 	private String fullName;
 
-	
-
 	public int getIndex() {
 		return index;
 	}

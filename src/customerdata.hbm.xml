@@ -3,8 +3,9 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
       "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.Barrabee.customerdata.user" table="users">
-		<id name="index" column="Index" type="int">
+	<class name="com.Barrabee.customerdata.User" table="users">
+		<id name="index" column="index" type="int">
+
 			<generator class="increment"></generator>
 		</id>
 		<property name="username" column="username" type="string"></property>
