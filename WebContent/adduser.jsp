@@ -2,40 +2,26 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.io.*,java.util.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+//import link w. DAO
 
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Add User</title>
 </head>
 <body>
-<center>
-<h1>User Information</h1>
-<ul>
-<li><p><b>Username:</b>
-   <%= request.getParameter("username")%>
-</p></li>
-<li><p><b>Password:</b>
-   <%= request.getParameter("password")%>
-</p></li>
-<li><p><b>Email:</b>
-   <%= request.getParameter("email")%>
-</p></li>
-<li><p><b>Full  Name:</b>
-   <%= request.getParameter("full_name")%>
-</p></li>
-</ul>
+<h1>Add User</h1>
+<jsp:useBean id="obj" class="com.barrabee.customerdata.User">  
+</jsp:useBean>  
+<jsp:setProperty property="*" name="obj"/>
 
 <%  
-int i=userDAO.addProduct(obj); 
+int i=userDAO.addUser(obj); 
 if (i > 0)  
-	out.print("Product successfully added");  
+	out.print("User successfully added");  
 else
-	out.println("Error; product not added");
+	out.println("Error; user not added");
 %>
 </body>
 </html>
