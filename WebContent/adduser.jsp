@@ -15,14 +15,12 @@
 </head>
 <body>
 <h1>Add User</h1>
-<jsp:useBean id="u" class="com.Barrabee.customerData.User">  
+<jsp:useBean id="obj" class="com.Barrabee.customerData.User">  
 </jsp:useBean>  
-<jsp:setProperty property="*" name="u"/>
-
-
+<jsp:setProperty property="*" name="obj"/>
 <%  
 
-int i=DAO.addUser(u); 
+int i=DAO.addUser(obj); 
 if (i > 0)  
 	out.print("User successfully added");  
 else
